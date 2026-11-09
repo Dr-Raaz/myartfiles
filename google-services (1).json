@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "338434921966",
+    "project_id": "my-art-studio-67",
+    "storage_bucket": "my-art-studio-67.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338434921966:android:bc59930101a53dc664eaff",
+        "android_client_info": {
+          "package_name": "com.drraaz.myartstudio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338434921966-d33m8mrtvnmfb1rm50km81fj0p80aqdh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaWzrOmXWS0nPErNnj5ubvqPMNI0aA8RY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338434921966-d33m8mrtvnmfb1rm50km81fj0p80aqdh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
