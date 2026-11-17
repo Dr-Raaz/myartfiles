@@ -1,0 +1,531 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS D:\codex production\Route-tracker>
+PS D:\codex production\Route-tracker> Select-String -Path .\supabase\config.toml -Pattern 'major_version'
+
+supabase\config.toml:13:major_version = 17
+
+
+PS D:\codex production\Route-tracker> bunx supabase start
+failed to inspect container health: failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+Try rerunning the command with --debug to troubleshoot the error.
+PS D:\codex production\Route-tracker>
+PS D:\codex production\Route-tracker> docker info
+Client:
+ Version:    29.9.3
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.153.0
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-agent.exe
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.33.0
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-ai.exe
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.38.1
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-buildx.exe
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.7.0
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-compose.exe
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.49.0
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-debug.exe
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  4.99.0
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-desktop.exe
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.10
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-dhi.exe
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.32
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-extension.exe
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.1
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-init.exe
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.44.3
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-mcp.exe
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.2.9
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-model.exe
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.7.36
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-offload.exe
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.3.2
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-pass.exe
+  sandbox: "docker sandbox" is deprecated, use Docker Sandboxes instead (Docker Inc.)
+    Version:  v0.13.0
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-sandbox.exe
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.28.0
+    Path:     C:\Users\Dr.Raaz\.docker\cli-plugins\docker-scout.exe
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 4
+ Server Version: 29.9.3
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: local
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: b7a25261e029d68978bbf290df0a62fc819b3c51
+ runc version: v1.5.2-0-g29dd3dc2
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.18.58.1-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 12
+ Total Memory: 6.7GiB
+ Name: docker-desktop
+ ID: 2d513f5f-d175-425d-95d3-134ec78cdb7c
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  127.0.0.0/8
+  ::1/128
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+PS D:\codex production\Route-tracker>
+PS D:\codex production\Route-tracker>
+PS D:\codex production\Route-tracker>
+PS D:\codex production\Route-tracker> bunx supabase start
+0.58.0-alpine: Pulling from supabase/vector
+17.12.0.000: Pulling from supabase/postgres
+v1.96.0: Pulling from supabase/storage-api
+v1.31.3: Pulling from supabase/mailpit
+v2.167.0: Pulling from supabase/realtime
+v1.79.1: Pulling from supabase/edge-runtime
+2026.11.16-sha-51bd16d: Pulling from supabase/studio
+v0.100.0: Pulling from supabase/postgres-meta
+c0d154ce40b5: Pulling fs layer
+48632da4d0bc: Pulling fs layer
+ed37dcc8b73c: Pulling fs layer
+dd051e1b8c92: Pulling fs layer
+ba520eef448f: Pulling fs layer
+b7a1c5dd95db: Pulling fs layer
+c8706a120d79: Pulling fs layer
+f0400f4b55b0: Pulling fs layer
+3d7229f68518: Pulling fs layer
+2cfab517365c: Pulling fs layer
+a8de9fa05220: Pulling fs layer
+86db7dae1346: Pulling fs layer
+7fd1ebe418b5: Pulling fs layer
+6de2243f7511: Pulling fs layer
+ae5d6c6b373f: Pulling fs layer
+d22c69a95cf4: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+55afa1ecc21d: Pulling fs layer
+921bfecda4c1: Pulling fs layer
+80af27af8935: Pulling fs layer
+30fdcf1539bd: Pulling fs layer
+7c115bed1203: Pulling fs layer
+4f4fb700ef54: Already exists
+e731957ed974: Pulling fs layer
+dd2cdf95914a: Pulling fs layer
+b8444e0094c0: Pulling fs layer
+e50fc22307d7: Pulling fs layer
+7b229517ed22: Pulling fs layer
+46f115b2e1ef: Pulling fs layer
+fab7ead19d67: Pulling fs layer
+bb85d73654cc: Pulling fs layer
+1d079df4d352: Pulling fs layer
+e6974051c57c: Pulling fs layer
+ca61bd28e319: Pulling fs layer
+6fe10db39197: Pulling fs layer
+321c36819a64: Pulling fs layer
+44136fa355b3: Already exists
+6c11b30372ef: Pulling fs layer
+0a0b1cce89bf: Pulling fs layer
+e2de96513ba9: Pulling fs layer
+44136fa355b3: Already exists
+44136fa355b3: Already exists
+b7a1c5dd95db: Download complete
+c0d154ce40b5: Download complete
+dd051e1b8c92: Download complete
+ed37dcc8b73c: Download complete
+48632da4d0bc: Download complete
+44136fa355b3: Already exists
+f0400f4b55b0: Download complete
+86db7dae1346: Download complete
+c8706a120d79: Download complete
+a8de9fa05220: Download complete
+dd051e1b8c92: Pull complete
+48632da4d0bc: Pull complete
+b7a1c5dd95db: Pull complete
+2cfab517365c: Download complete
+6de2243f7511: Download complete
+ed37dcc8b73c: Pull complete
+3d7229f68518: Download complete
+ae5d6c6b373f: Download complete
+7fd1ebe418b5: Download complete
+4f4fb700ef54: Pulling fs layer
+e87ae8c8f0b6: Pulling fs layer
+062e450697fa: Pulling fs layer
+aadc1df55248: Pulling fs layer
+ae8863254b88: Pulling fs layer
+188279791455: Pulling fs layer
+78b3f7edad35: Pulling fs layer
+632438462ff3: Pulling fs layer
+c8643991b1ea: Pulling fs layer
+16c36e0c68b5: Pulling fs layer
+4853cdca43ab: Pulling fs layer
+467d89f0ba5c: Pulling fs layer
+4f4fb700ef54: Already exists
+44136fa355b3: Already exists
+7c685373ef1b: Pulling fs layer
+e727da478d47: Pulling fs layer
+dd051e1b8c92: Pulling fs layer
+9c036b77be6e: Pulling fs layer
+5030a48eb5b0: Pulling fs layer
+22a7c5e442cd: Pulling fs layer
+33c12402723d: Pulling fs layer
+c34f02d00fde: Pulling fs layer
+41b0ebabce32: Pulling fs layer
+dd051e1b8c92: Download complete
+44136fa355b3: Already exists
+d32d208eaaa5: Pulling fs layer
+3ca0995d0222: Pulling fs layer
+8d66f2940e9d: Pulling fs layer
+76b840fd81dd: Pulling fs layer
+f4aca90d0283: Pulling fs layer
+82abccb2fb0a: Pulling fs layer
+3ea60fb0d597: Pulling fs layer
+639bbd3225c7: Pulling fs layer
+74c614fb2c68: Pulling fs layer
+dcbd51e646b5: Pulling fs layer
+35f240f3c960: Pulling fs layer
+c878e3ad1af6: Pulling fs layer
+128cfe224d79: Pulling fs layer
+cce7c8b5ebe4: Pulling fs layer
+d5c178385ff3: Pulling fs layer
+313fa5577732: Pulling fs layer
+744b6809f8c9: Pulling fs layer
+c9787c1f8e7a: Pulling fs layer
+ee1593d0414b: Pulling fs layer
+4154961adf71: Pulling fs layer
+4dfa1452efb3: Pulling fs layer
+b4f057436371: Pulling fs layer
+850580fe84eb: Pulling fs layer
+d6e11c54e3d3: Pulling fs layer
+9dc927246a51: Pulling fs layer
+3237eb89b875: Pulling fs layer
+fa309f932e38: Pulling fs layer
+9c82df6d578a: Pulling fs layer
+44136fa355b3: Already exists
+7fd1ebe418b5: Pull complete
+f0400f4b55b0: Pull complete
+7c115bed1203: Download complete
+921bfecda4c1: Download complete
+55afa1ecc21d: Download complete
+55afa1ecc21d: Pull complete
+921bfecda4c1: Pull complete
+30fdcf1539bd: Download complete
+d22c69a95cf4: Download complete
+d22c69a95cf4: Pull complete
+a8de9fa05220: Pull complete
+2cfab517365c: Pull complete
+3d7229f68518: Pull complete
+86db7dae1346: Pull complete
+ae5d6c6b373f: Pull complete
+c8706a120d79: Pull complete
+6de2243f7511: Pull complete
+1d079df4d352: Download complete
+ba520eef448f: Download complete
+ba520eef448f: Pull complete
+c0d154ce40b5: Pull complete
+fab7ead19d67: Download complete
+7b229517ed22: Download complete
+46f115b2e1ef: Download complete
+bb85d73654cc: Download complete
+7b229517ed22: Pull complete
+80af27af8935: Download complete
+80af27af8935: Pull complete
+30fdcf1539bd: Pull complete
+4f4fb700ef54: Pull complete
+7c115bed1203: Pull complete
+4f4fb700ef54: Pull complete
+ca61bd28e319: Download complete
+b8444e0094c0: Download complete
+dd2cdf95914a: Download complete
+e50fc22307d7: Download complete
+6fe10db39197: Download complete
+321c36819a64: Download complete
+80862ff61dbf: Download complete
+Digest: sha256:5dcf67db0ee378caa87f3395cb9484ebe3e97bb0334d119f2ac33116e00c5773
+Status: Downloaded newer image for public.ecr.aws/supabase/vector:0.58.0-alpine
+public.ecr.aws/supabase/vector:0.58.0-alpine
+e6974051c57c: Download complete
+e2de96513ba9: Download complete
+e2de96513ba9: Pull complete
+6c11b30372ef: Download complete
+7af3dc659d68: Download complete
+2f6472198157: Download complete
+feff48bcab89: Download complete
+Digest: sha256:185b4039d8e8ffe0a3a41b425bd299a51100a590d04e05aa4c2be1d66d09cb5d
+Status: Downloaded newer image for public.ecr.aws/supabase/edge-runtime:v1.79.1
+public.ecr.aws/supabase/edge-runtime:v1.79.1
+0a0b1cce89bf: Download complete
+0a0b1cce89bf: Pull complete
+6c11b30372ef: Pull complete
+Digest: sha256:ed9b00c609e77e99c79b93f1178255ebc271868920f2c69a8d166bd5634ed10d
+Status: Downloaded newer image for public.ecr.aws/supabase/mailpit:v1.31.3
+public.ecr.aws/supabase/mailpit:v1.31.3
+ae8863254b88: Download complete
+78b3f7edad35: Download complete
+632438462ff3: Download complete
+188279791455: Download complete
+16c36e0c68b5: Download complete
+c8643991b1ea: Download complete
+e731957ed974: Download complete
+e731957ed974: Pull complete
+46f115b2e1ef: Pull complete
+e6974051c57c: Pull complete
+fab7ead19d67: Pull complete
+bb85d73654cc: Pull complete
+b8444e0094c0: Pull complete
+6fe10db39197: Pull complete
+4853cdca43ab: Download complete
+321c36819a64: Pull complete
+467d89f0ba5c: Download complete
+e87ae8c8f0b6: Download complete
+aadc1df55248: Download complete
+62216a0abf87: Download complete
+f1b6bcd7648d: Download complete
+Digest: sha256:145325b7e39f8ef4931d6e8cfd3f6f4d655de09d72a2ccc96d9513542c2202bd
+Status: Downloaded newer image for public.ecr.aws/supabase/postgres-meta:v0.100.0
+public.ecr.aws/supabase/postgres-meta:v0.100.0
+062e450697fa: Download complete
+41b0ebabce32: Download complete
+22a7c5e442cd: Download complete
+22a7c5e442cd: Pull complete
+062e450697fa: Pull complete
+e727da478d47: Download complete
+aadc1df55248: Pull complete
+ae8863254b88: Pull complete
+188279791455: Pull complete
+78b3f7edad35: Pull complete
+failed to prepare extraction snapshot "extract-917345763-E7Jn sha256:1ee53a2d6135655c8d71392c282a03d57b2d3c490dfa22560477d91a95c5b206": input/output error
+Retrying after 4s: public.ecr.aws/supabase/realtime:v2.167.0
+failed to extract layer (application/vnd.oci.image.layer.v1.tar+gzip sha256:dd2cdf95914a5971754e88fdad87b5b236b8a56f8215aeec93287a7107bb5728) to overlayfs as "extract-591944861-AdC3 sha256:a0959ce875d5301b48f7cc5b9fdd294c3d7d5ee542cc23960d095ce754f5d1b5": chmod /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/67/fs/app/node_modules/ret/dist/types/set-lookup.d.ts: read-only file system
+Retrying after 4s: public.ecr.aws/supabase/storage-api:v1.96.0
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: public.ecr.aws/supabase/realtime:v2.167.0
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: public.ecr.aws/supabase/storage-api:v1.96.0
+failed to copy: failed to send write: write /var/lib/desktop-containerd/daemon/io.containerd.content.v1.content/ingest/e88c201e513cf232f7b00d66f0930e92b9c1ac5738746a5e53d8525d4ef04939/data: read-only file system
+Retrying after 4s: public.ecr.aws/supabase/studio:2026.11.16-sha-51bd16d
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+failed to copy: failed to send write: write /var/lib/desktop-containerd/daemon/io.containerd.content.v1.content/ingest/d6750abc7b5370d10347bdcc034300ccf6a5e27b0473e9e689dab5907b44c30e/data: read-only file system
+Retrying after 4s: public.ecr.aws/supabase/postgres:17.12.0.000
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 4s: ghcr.io/supabase/storage-api:v1.96.0
+Retrying after 4s: ghcr.io/supabase/realtime:v2.167.0
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: public.ecr.aws/supabase/studio:2026.11.16-sha-51bd16d
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: public.ecr.aws/supabase/postgres:17.12.0.000
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: ghcr.io/supabase/realtime:v2.167.0
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: ghcr.io/supabase/storage-api:v1.96.0
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 4s: ghcr.io/supabase/studio:2026.11.16-sha-51bd16d
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 4s: ghcr.io/supabase/postgres:17.12.0.000
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 4s: supabase/realtime:v2.167.0
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 4s: supabase/storage-api:v1.96.0
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: ghcr.io/supabase/studio:2026.11.16-sha-51bd16d
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: ghcr.io/supabase/postgres:17.12.0.000
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: supabase/realtime:v2.167.0
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: supabase/storage-api:v1.96.0
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 4s: supabase/studio:2026.11.16-sha-51bd16d
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 4s: supabase/postgres:17.12.0.000
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: supabase/studio:2026.11.16-sha-51bd16d
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Retrying after 8s: supabase/postgres:17.12.0.000
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+failed to pull docker image from all registries: public.ecr.aws/supabase/postgres:17.12.0.000 attempt 1: 17.12.0.000: Pulling from supabase/postgres
+d32d208eaaa5: Pulling fs layer
+3ca0995d0222: Pulling fs layer
+8d66f2940e9d: Pulling fs layer
+76b840fd81dd: Pulling fs layer
+f4aca90d0283: Pulling fs layer
+82abccb2fb0a: Pulling fs layer
+3ea60fb0d597: Pulling fs layer
+639bbd3225c7: Pulling fs layer
+74c614fb2c68: Pulling fs layer
+dcbd51e646b5: Pulling fs layer
+35f240f3c960: Pulling fs layer
+c878e3ad1af6: Pulling fs layer
+128cfe224d79: Pulling fs layer
+cce7c8b5ebe4: Pulling fs layer
+d5c178385ff3: Pulling fs layer
+313fa5577732: Pulling fs layer
+744b6809f8c9: Pulling fs layer
+c9787c1f8e7a: Pulling fs layer
+ee1593d0414b: Pulling fs layer
+4154961adf71: Pulling fs layer
+4dfa1452efb3: Pulling fs layer
+b4f057436371: Pulling fs layer
+850580fe84eb: Pulling fs layer
+d6e11c54e3d3: Pulling fs layer
+9dc927246a51: Pulling fs layer
+3237eb89b875: Pulling fs layer
+fa309f932e38: Pulling fs layer
+9c82df6d578a: Pulling fs layer
+44136fa355b3: Already exists
+failed to copy: failed to send write: write /var/lib/desktop-containerd/daemon/io.containerd.content.v1.content/ingest/d6750abc7b5370d10347bdcc034300ccf6a5e27b0473e9e689dab5907b44c30e/data: read-only file system; public.ecr.aws/supabase/postgres:17.12.0.000 attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; public.ecr.aws/supabase/postgres:17.12.0.000 attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/postgres:17.12.0.000 attempt 1: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/postgres:17.12.0.000 attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/postgres:17.12.0.000 attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/postgres:17.12.0.000 attempt 1: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/postgres:17.12.0.000 attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/postgres:17.12.0.000 attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+failed to pull docker image from all registries: public.ecr.aws/supabase/realtime:v2.167.0 attempt 1: v2.167.0: Pulling from supabase/realtime
+4f4fb700ef54: Pulling fs layer
+e87ae8c8f0b6: Pulling fs layer
+062e450697fa: Pulling fs layer
+aadc1df55248: Pulling fs layer
+ae8863254b88: Pulling fs layer
+188279791455: Pulling fs layer
+78b3f7edad35: Pulling fs layer
+632438462ff3: Pulling fs layer
+c8643991b1ea: Pulling fs layer
+16c36e0c68b5: Pulling fs layer
+4853cdca43ab: Pulling fs layer
+467d89f0ba5c: Pulling fs layer
+4f4fb700ef54: Already exists
+4f4fb700ef54: Pull complete
+ae8863254b88: Download complete
+78b3f7edad35: Download complete
+632438462ff3: Download complete
+188279791455: Download complete
+16c36e0c68b5: Download complete
+c8643991b1ea: Download complete
+4853cdca43ab: Download complete
+467d89f0ba5c: Download complete
+e87ae8c8f0b6: Download complete
+aadc1df55248: Download complete
+62216a0abf87: Download complete
+062e450697fa: Download complete
+062e450697fa: Pull complete
+aadc1df55248: Pull complete
+ae8863254b88: Pull complete
+188279791455: Pull complete
+78b3f7edad35: Pull complete
+failed to prepare extraction snapshot "extract-917345763-E7Jn sha256:1ee53a2d6135655c8d71392c282a03d57b2d3c490dfa22560477d91a95c5b206": input/output error; public.ecr.aws/supabase/realtime:v2.167.0 attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; public.ecr.aws/supabase/realtime:v2.167.0 attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/realtime:v2.167.0 attempt 1: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/realtime:v2.167.0 attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/realtime:v2.167.0 attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/realtime:v2.167.0 attempt 1: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/realtime:v2.167.0 attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/realtime:v2.167.0 attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+failed to pull docker image from all registries: public.ecr.aws/supabase/storage-api:v1.96.0 attempt 1: v1.96.0: Pulling from supabase/storage-api
+e731957ed974: Pulling fs layer
+dd2cdf95914a: Pulling fs layer
+b8444e0094c0: Pulling fs layer
+e50fc22307d7: Pulling fs layer
+7b229517ed22: Pulling fs layer
+46f115b2e1ef: Pulling fs layer
+fab7ead19d67: Pulling fs layer
+bb85d73654cc: Pulling fs layer
+1d079df4d352: Pulling fs layer
+e6974051c57c: Pulling fs layer
+ca61bd28e319: Pulling fs layer
+6fe10db39197: Pulling fs layer
+321c36819a64: Pulling fs layer
+44136fa355b3: Already exists
+1d079df4d352: Download complete
+fab7ead19d67: Download complete
+7b229517ed22: Download complete
+46f115b2e1ef: Download complete
+bb85d73654cc: Download complete
+7b229517ed22: Pull complete
+ca61bd28e319: Download complete
+b8444e0094c0: Download complete
+dd2cdf95914a: Download complete
+e50fc22307d7: Download complete
+6fe10db39197: Download complete
+321c36819a64: Download complete
+e6974051c57c: Download complete
+7af3dc659d68: Download complete
+e731957ed974: Download complete
+e731957ed974: Pull complete
+46f115b2e1ef: Pull complete
+e6974051c57c: Pull complete
+fab7ead19d67: Pull complete
+bb85d73654cc: Pull complete
+b8444e0094c0: Pull complete
+6fe10db39197: Pull complete
+321c36819a64: Pull complete
+failed to extract layer (application/vnd.oci.image.layer.v1.tar+gzip sha256:dd2cdf95914a5971754e88fdad87b5b236b8a56f8215aeec93287a7107bb5728) to overlayfs as "extract-591944861-AdC3 sha256:a0959ce875d5301b48f7cc5b9fdd294c3d7d5ee542cc23960d095ce754f5d1b5": chmod /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/67/fs/app/node_modules/ret/dist/types/set-lookup.d.ts: read-only file system; public.ecr.aws/supabase/storage-api:v1.96.0 attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; public.ecr.aws/supabase/storage-api:v1.96.0 attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/storage-api:v1.96.0 attempt 1: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/storage-api:v1.96.0 attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/storage-api:v1.96.0 attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/storage-api:v1.96.0 attempt 1: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/storage-api:v1.96.0 attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/storage-api:v1.96.0 attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+failed to pull docker image from all registries: public.ecr.aws/supabase/studio:2026.11.16-sha-51bd16d attempt 1: 2026.11.16-sha-51bd16d: Pulling from supabase/studio
+7c685373ef1b: Pulling fs layer
+e727da478d47: Pulling fs layer
+dd051e1b8c92: Pulling fs layer
+9c036b77be6e: Pulling fs layer
+5030a48eb5b0: Pulling fs layer
+22a7c5e442cd: Pulling fs layer
+33c12402723d: Pulling fs layer
+c34f02d00fde: Pulling fs layer
+41b0ebabce32: Pulling fs layer
+dd051e1b8c92: Download complete
+44136fa355b3: Already exists
+41b0ebabce32: Download complete
+22a7c5e442cd: Download complete
+22a7c5e442cd: Pull complete
+e727da478d47: Download complete
+failed to copy: failed to send write: write /var/lib/desktop-containerd/daemon/io.containerd.content.v1.content/ingest/e88c201e513cf232f7b00d66f0930e92b9c1ac5738746a5e53d8525d4ef04939/data: read-only file system; public.ecr.aws/supabase/studio:2026.11.16-sha-51bd16d attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; public.ecr.aws/supabase/studio:2026.11.16-sha-51bd16d attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/studio:2026.11.16-sha-51bd16d attempt 1: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/studio:2026.11.16-sha-51bd16d attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; ghcr.io/supabase/studio:2026.11.16-sha-51bd16d attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/studio:2026.11.16-sha-51bd16d attempt 1: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/studio:2026.11.16-sha-51bd16d attempt 2: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system; supabase/studio:2026.11.16-sha-51bd16d attempt 3: Error response from daemon: write /var/lib/desktop-containerd/daemon/io.containerd.metadata.v1.bolt/meta.db: read-only file system
+Try rerunning the command with --debug to troubleshoot the error.
+PS D:\codex production\Route-tracker>
+PS D:\codex production\Route-tracker>
+PS D:\codex production\Route-tracker>
+PS D:\codex production\Route-tracker> docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS D:\codex production\Route-tracker>
+PS D:\codex production\Route-tracker> docker system df
+request returned 502 Bad Gateway for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.56/system/df, check if the server supports the requested API version
+PS D:\codex production\Route-tracker>
