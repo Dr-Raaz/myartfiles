@@ -1,0 +1,14 @@
+function_schema,function_name,arguments
+extensions,finish,exception_on_failure boolean
+extensions,is,"anyelement, anyelement, text"
+extensions,is,"anyelement, anyelement"
+extensions,ok,"boolean, text"
+extensions,ok,boolean
+extensions,plan,integer
+extensions,throws_ok,"text, integer, text"
+extensions,throws_ok,"text, integer"
+extensions,throws_ok,"text, character, text, text"
+extensions,throws_ok,"text, text, text"
+extensions,throws_ok,"text, text"
+extensions,throws_ok,text
+extensions,throws_ok,"text, integer, text, text"
